@@ -1,3 +1,4 @@
+
 // Get the input field and button
 const noteInput = document.getElementById('note-input');
 const playBtn = document.getElementById('play-btn');
@@ -12,14 +13,18 @@ const notes = {
 
 // Function to play the note
 function playNote(note) {
-  const audio = new Audio(notes/${notes[note]});
-  audio.play();
+  try {
+    const audio = new Audio(notes/${notes[note]});
+    audio.play();
+  } catch (error) {
+    console.error(Error playing note: ${error});
+  }
 }
 
 // Add event listener to the button
 playBtn.addEventListener('click', () => {
-  const note = noteInput.value.toUpperCase();
-  if (notes[note]) {
+  const note = noteInput.value.trim().toUpperCase();
+  if (note && notes[note]) {
     playNote(note);
   } else {
     console.log(Note not found: ${note});
