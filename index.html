@@ -1,11 +1,25 @@
-<!DOCTYPE html>
+
 <html>
 <head>
-  <title>Audio Player</title>
+ <title>Music Player</title>
+ <style>
+ .note {
+ width: 100px;
+ height: 100px;
+ border: 1px solid black;
+ display: inline-block;
+ margin: 10px;
+ text-align: center;
+ padding-top: 40px;
+ cursor: pointer;
+ }
+ </style>
 </head>
 <body>
-  <button onclick="playNote('c')">Play C Note</button>
+ <div class="note" onclick="playNote('s1')">Note 1</div>
+ <div class="note" onclick="playNote('s2')">Note 2</div>
+ <div class="note" onclick="playNote('s3')">Note 3</div>
 
-  <script src="script.js"></script>
+ <script src="script.js"></script>
 </body>
 </html>
