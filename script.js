@@ -1,7 +1,4 @@
-const notes = {
-  c: new Audio('notes/c-note.wav'),
-}
-
 function playNote(note) {
-  notes[note].play()
+ const audio = new Audio(${note}.wav);
+ audio.play();
 }
