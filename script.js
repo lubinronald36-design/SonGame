@@ -1,4 +1,4 @@
-function playNote(note) {
+unction playNote(note) {
  const audio = new Audio(${note}.wav);
  audio.play();
 }
